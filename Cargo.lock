@@ -1986,7 +1986,7 @@ checksum = "f1382d1f0a252c4bf97dc20d979a2fdd05b024acd7c2ed0f7595d7817666a157"
 [[package]]
 name = "rspirv"
 version = "0.11.0+sdk-1.2.198"
-source = "git+https://github.com/beastle9end/rspirv#5e87a4ea4a9ba8341a56685d6301493201254dd3"
+source = "git+https://github.com/beastle9end/rspirv#43850fe299c30559f5de4a6fd0588a8e53509837"
 dependencies = [
  "rustc-hash",
  "spirv 0.2.0+sdk-1.2.198",
@@ -2264,7 +2264,7 @@ dependencies = [
 [[package]]
 name = "spirv"
 version = "0.2.0+sdk-1.2.198"
-source = "git+https://github.com/beastle9end/rspirv#5e87a4ea4a9ba8341a56685d6301493201254dd3"
+source = "git+https://github.com/beastle9end/rspirv#43850fe299c30559f5de4a6fd0588a8e53509837"
 dependencies = [
  "bitflags",
 ]
