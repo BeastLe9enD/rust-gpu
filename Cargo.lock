@@ -1389,7 +1389,7 @@ dependencies = [
  "num-traits",
  "petgraph",
  "rustc-hash",
- "spirv",
+ "spirv 0.2.0+1.5.4",
  "thiserror",
 ]
 
@@ -1985,13 +1985,11 @@ checksum = "f1382d1f0a252c4bf97dc20d979a2fdd05b024acd7c2ed0f7595d7817666a157"
 
 [[package]]
 name = "rspirv"
-version = "0.11.0+1.5.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1503993b59ca9ae4127365c3293517576d7ce56be9f3d8abb1625c85ddc583ba"
+version = "0.11.0+sdk-1.2.198"
+source = "git+https://github.com/beastle9end/rspirv#5e87a4ea4a9ba8341a56685d6301493201254dd3"
 dependencies = [
- "fxhash",
- "num-traits",
- "spirv",
+ "rustc-hash",
+ "spirv 0.2.0+sdk-1.2.198",
 ]
 
 [[package]]
@@ -2261,6 +2259,14 @@ checksum = "246bfa38fe3db3f1dfc8ca5a2cdeb7348c78be2112740cc0ec8ef18b6d94f830"
 dependencies = [
  "bitflags",
  "num-traits",
+]
+
+[[package]]
+name = "spirv"
+version = "0.2.0+sdk-1.2.198"
+source = "git+https://github.com/beastle9end/rspirv#5e87a4ea4a9ba8341a56685d6301493201254dd3"
+dependencies = [
+ "bitflags",
 ]
 
 [[package]]
