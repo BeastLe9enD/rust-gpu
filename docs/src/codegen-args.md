@@ -27,7 +27,7 @@ $ file postlink/*
 postlink/module: Khronos SPIR-V binary, little-endian, version 0x010300, generator 0x1b0000
 ```
 
-Notable, `RUSTGPU_CODEGEN_ARGS="--help"` can be used to see an "usage" message (which lists all the flags/options, including onesn not listed in this document), via e.g. running a Cargo build that relies on `spirv-builder`.
+Notably, `RUSTGPU_CODEGEN_ARGS="--help"` can be used to see a "usage" message (which lists all the flags/options, including ones not listed in this document), via e.g. running a Cargo build that relies on `spirv-builder`.
 
 However, it's only a convenient alias for for `RUSTGPU_RUSTFLAGS=-Cllvm-args="..."` (without having to expose the fact that LLVM's name is still attached to `rustc`'s interface for this functionality), and if in direct control of `rustc`, you can still pass such "codegen args" flags/options wrapped in `-C llvm-args="..."`.
 
@@ -139,7 +139,9 @@ anyway, be careful).
 
 Disables CFG structurization. Probably results in invalid modules.
 
-### `--spirt`
+### `--spirt` <sub>_(until 0.6.0)_</sub>
+
+Note: as of `rust-gpu 0.6.0`, `SPIR-🇹` is enabled by default. Use `--no-spirt` to disable.
 
 Enables using the experimental [`SPIR-🇹` shader IR framework](https://github.com/EmbarkStudios/spirt) in the linker - more specifically, this:
 - adds a `SPIR-V -> SPIR-🇹 -> SPIR-V` roundtrip  
@@ -148,6 +150,9 @@ Enables using the experimental [`SPIR-🇹` shader IR framework](https://github.
 - runs some existing `SPIR-V` legalization/optimization passes (`mem2reg`) *before* inlining, instead of *only after* (as the `OpPhi`s they would produce are no longer an issue for structurization)
 
 For more information, also see [the `SPIR-🇹` repository](https://github.com/EmbarkStudios/spirt).
+
+### `--no-spirt` <sub>_(0.6.0)_</sup>
+Disables the [`SPIR-🇹` shader IR framework](https://github.com/EmbarkStudios/spirt) in the linker.
 
 ### `--spirt-passes PASSES`
 
